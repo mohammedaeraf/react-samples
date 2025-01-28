@@ -1,11 +1,14 @@
 import "./App.css";
+import AboutUs from "./Components/AboutUs.tsx";
 import Cars from "./Components/Cars.tsx";
 
 function App() {
   return (
     <>
-      <h4>React Demos</h4>
-      <Cars></Cars>
+      <header>
+        <h1>React Demos</h1>
+      </header>
+      <AboutUs></AboutUs>
     </>
   );
 }

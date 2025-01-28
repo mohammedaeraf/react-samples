@@ -1,0 +1,25 @@
+main {
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 3rem;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.2em;
+}
+
+section.imgContainer {
+  width: 800px;
+  /* height: 800px; */
+  margin: auto;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
