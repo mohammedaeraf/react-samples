@@ -1,13 +1,11 @@
 import "./App.css";
-import LoginRegister from "./Components/LoginRegister.tsx";
-import Profile from "./Components/Profile.tsx";
+import Cars from "./Components/Cars.tsx";
 
 function App() {
   return (
     <>
-      <h6>React Demos</h6>
-      <Profile />
-      <LoginRegister></LoginRegister>
+      <h4>React Demos</h4>
+      <Cars></Cars>
     </>
   );
 }
