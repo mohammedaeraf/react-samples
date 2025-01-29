@@ -1,4 +1,5 @@
 import "./AboutUs.css";
+import aboutImg from "../assets/about.jpg";
 
 function AboutUs() {
   return (
@@ -24,10 +25,7 @@ function AboutUs() {
         shape a brighter future!
       </p>
       <section id="imgContainer">
-        <img
-          src="https://images.pexels.com/photos/3184394/pexels-photo-3184394.jpeg?auto=compress&cs=tinysrgb&w=800"
-          alt="About Us"
-        />
+        <img src={aboutImg} alt="About Us" />
       </section>
     </main>
   );
