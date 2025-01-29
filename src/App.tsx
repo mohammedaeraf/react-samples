@@ -9,7 +9,8 @@ function App() {
       <header>
         <h1>React Demos</h1>
       </header>
-      <AboutUs />
+      <CourseList />
+      <Cars />
     </>
   );
 }

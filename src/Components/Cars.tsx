@@ -1,10 +1,10 @@
 import "./Cars.css";
 
 function Cars() {
-  return (  
-    <table>
+  return (
+    <table className="table table-striped">
       <caption>Details of Cars</caption>
-      <thead>
+      <thead className="table-primary">
         <tr>
           <th>#</th>
           <th>Car Model</th>
