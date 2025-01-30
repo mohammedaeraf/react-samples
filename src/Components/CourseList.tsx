@@ -1,6 +1,6 @@
 import "./CourseList.css";
 const CourseList = () => {
-  const courses = [
+  let courses = [
     {
       id: 1,
       title: "Advanced Web Design",
@@ -20,6 +20,18 @@ const CourseList = () => {
       duration: "30 days",
     },
   ];
+
+  courses = []; // empty the array
+
+  // Conditional Rendering
+  if (courses.length == 0) {
+    return (
+      <div>
+        <h2 className="text-danger">Course List</h2>
+        <h6 className="text-primary"> No Course available</h6>
+      </div>
+    );
+  }
 
   return (
     <div>

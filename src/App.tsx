@@ -10,7 +10,7 @@ function App() {
         <h1>React Demos</h1>
       </header>
       <CourseList />
-      <Cars />
+      {/* <Cars /> */}
     </>
   );
 }
