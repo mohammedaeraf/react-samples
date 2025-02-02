@@ -1,18 +1,10 @@
 import "./Cars.css";
+import Car from "../Models/Car";
 
-interface Car {
-  id: number;
-  model: string;
-  manufacturer: string;
-  price: number;
-  type: string;
-}
 interface Props {
   items: Car[];
 }
 function CarsProps(props: Props) {
-  // cars = [];
-
   if (props.items.length === 0) {
     return <h3>No records found</h3>;
   }
