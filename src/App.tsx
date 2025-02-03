@@ -4,9 +4,11 @@ import Cars from "./Components/Cars.tsx";
 import CarsProps from "./Components/CarsProps.tsx";
 import Counter from "./Components/Counter.tsx";
 import CourseListProps from "./Components/CourseListProps.tsx";
+import GreetingProps from "./Components/GreetingProps.tsx";
 import NameInput from "./Components/NameInput.tsx";
 import ProductsProps from "./Components/ProductsProps.tsx";
 import Toggle from "./Components/Toggle.tsx";
+import UserProfileProps from "./Components/UserProfileProps.tsx";
 import Vehicles from "./Components/Vehicles.tsx";
 import fetchCars from "./Services/CarService.tsx";
 
@@ -104,7 +106,7 @@ function App() {
       <header>
         <h1>React Demos</h1>
       </header>
-      <Toggle />
+      <GreetingProps name="Johny" />
     </>
   );
 }
