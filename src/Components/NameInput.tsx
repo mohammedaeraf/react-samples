@@ -1,19 +1,14 @@
 import { useState } from "react";
 
 const NameInput = () => {
-  const [name, setName] = useState("Your name");
+  const [name, setName] = useState<string>("");
 
   return (
     <div>
       <input
         type="text"
         value={name}
-        onChange={(event) => {
-          console.log("Value entered in textbox =>" + event.target.value);
-          setName(event.target.value);
-          console.log(event);
-        }}
-        placeholder="Enter your name"
+        onChange={(event) => setName(event.target.value)}
       />
       <p>Your name: {name}</p>
     </div>

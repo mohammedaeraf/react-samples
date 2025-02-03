@@ -2,8 +2,11 @@ import "./App.css";
 import AboutUs from "./Components/AboutUs.tsx";
 import Cars from "./Components/Cars.tsx";
 import CarsProps from "./Components/CarsProps.tsx";
+import Counter from "./Components/Counter.tsx";
 import CourseListProps from "./Components/CourseListProps.tsx";
+import NameInput from "./Components/NameInput.tsx";
 import ProductsProps from "./Components/ProductsProps.tsx";
+import Toggle from "./Components/Toggle.tsx";
 import Vehicles from "./Components/Vehicles.tsx";
 import fetchCars from "./Services/CarService.tsx";
 
@@ -101,8 +104,7 @@ function App() {
       <header>
         <h1>React Demos</h1>
       </header>
-      <CarsProps items={fetchCars()} />
-      {/* <ProductsProps items={products} /> */}
+      <Toggle />
     </>
   );
 }
