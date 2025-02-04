@@ -4,11 +4,14 @@ import Cars from "./Components/Cars.tsx";
 import CarsProps from "./Components/CarsProps.tsx";
 import Counter from "./Components/Counter.tsx";
 import CourseListProps from "./Components/CourseListProps.tsx";
+import Greeting from "./Components/Greeting.tsx";
 import GreetingProps from "./Components/GreetingProps.tsx";
 import NameInput from "./Components/NameInput.tsx";
 import ProductsProps from "./Components/ProductsProps.tsx";
 import Toggle from "./Components/Toggle.tsx";
+import ToggleSwitch from "./Components/ToggleSwitch.tsx";
 import UserProfileProps from "./Components/UserProfileProps.tsx";
+import UserProfileState from "./Components/UserProfileState.tsx";
 import Vehicles from "./Components/Vehicles.tsx";
 import fetchCars from "./Services/CarService.tsx";
 
@@ -106,7 +109,14 @@ function App() {
       <header>
         <h1>React Demos</h1>
       </header>
-      <GreetingProps name="Johny" />
+
+      <Greeting>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure accusamus
+        nemo impedit inventore sed soluta id voluptate accusantium cum dolor?
+        Impedit dolores deleniti deserunt aut reiciendis libero ea minus nisi!
+      </Greeting>
+
+      <ToggleSwitch />
     </>
   );
 }
