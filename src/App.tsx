@@ -1,5 +1,6 @@
 import "./App.css";
 import AboutUs from "./Components/AboutUs.tsx";
+import Article from "./Components/Article.tsx";
 import Cars from "./Components/Cars.tsx";
 import CarsProps from "./Components/CarsProps.tsx";
 import Counter from "./Components/Counter.tsx";
@@ -104,19 +105,29 @@ function App() {
     },
   ];
 
+  // return (
+  //   <div className="container mt-4">
+  //     <h1 className="text-center mb-4">Articles</h1>
+  //     <Article title="Understanding React Props">
+  //       Props allow components to receive data from their parent."
+  //     </Article>
+  //     <Article title="What is Bootstrap?">
+  //       Bootstrap is a popular CSS framework that helps in designing responsive
+  //       websites quickly.
+  //     </Article>
+  //     <Article title="What is a useState()">
+  //       useState() is a React Hook that is used to maintain state of Components
+  //       in React.
+  //     </Article>
+  //   </div>
+  // );
+
   return (
     <>
       <header>
         <h1>React Demos</h1>
       </header>
-
-      <Greeting>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure accusamus
-        nemo impedit inventore sed soluta id voluptate accusantium cum dolor?
-        Impedit dolores deleniti deserunt aut reiciendis libero ea minus nisi!
-      </Greeting>
-
-      <ToggleSwitch />
+      <Counter />
     </>
   );
 }
