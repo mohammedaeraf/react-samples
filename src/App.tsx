@@ -9,7 +9,9 @@ import CourseListProps from "./Components/CourseListProps.tsx";
 import Greeting from "./Components/Greeting.tsx";
 import GreetingProps from "./Components/GreetingProps.tsx";
 import NameInput from "./Components/NameInput.tsx";
+import ProductList from "./Components/ProductList.tsx";
 import ProductsProps from "./Components/ProductsProps.tsx";
+import RecipeList from "./Components/RecipeList.tsx";
 import Toggle from "./Components/Toggle.tsx";
 import ToggleSwitch from "./Components/ToggleSwitch.tsx";
 import UserList from "./Components/UserList.tsx";
@@ -129,7 +131,7 @@ function App() {
       <header>
         <h1>React Demos</h1>
       </header>
-      <UserList />
+      <ProductList />
     </>
   );
 }
