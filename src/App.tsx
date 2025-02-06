@@ -1,3 +1,5 @@
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
 import "./App.css";
 import AboutUs from "./Components/AboutUs.tsx";
 import Article from "./Components/Article.tsx";
@@ -19,6 +21,7 @@ import UserProfileProps from "./Components/UserProfileProps.tsx";
 import UserProfileState from "./Components/UserProfileState.tsx";
 import Vehicles from "./Components/Vehicles.tsx";
 import fetchCars from "./Services/CarService.tsx";
+import Home from "./Components/Home.tsx";
 
 function App() {
   // const cars = [
@@ -127,12 +130,20 @@ function App() {
   // );
 
   return (
-    <>
+    <Router>
       <header>
         <h1>React Demos</h1>
       </header>
-      <ProductList />
-    </>
+
+      <nav>
+        <Link to="/">Home</Link> | <Link to="/about">About Us</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<AboutUs />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
