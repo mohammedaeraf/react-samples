@@ -31,14 +31,17 @@ function UserList() {
 
   return (
     // Render the list of users as an unordered list
-    <ul>
-      {users.map((user) => (
-        // Use the user's id as the key for each list item
-        <li key={user.id}>
-          {user.name} - {user.email}
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2>User List</h2>
+      <ul>
+        {users.map((user) => (
+          // Use the user's id as the key for each list item
+          <li key={user.id}>
+            {user.name} - {user.email}
+          </li>
+        ))}
+      </ul>
+    </>
   );
 }
 

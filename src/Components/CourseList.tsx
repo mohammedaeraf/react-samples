@@ -21,7 +21,7 @@ const CourseList = () => {
     },
   ];
 
-  courses = []; // empty the array
+  // courses = []; // empty the array
 
   // Conditional Rendering
   if (courses.length == 0) {

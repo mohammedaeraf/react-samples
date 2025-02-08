@@ -1,26 +1,30 @@
+import { Link } from "react-router-dom";
+
 function Home() {
   return (
     <main>
-      <h2>Home</h2>
-      <p>
-        Welcome to our company! We pride ourselves on our commitment to
-        excellence and our passion for delivering outstanding products and
-        services to our valued customers. Established with the vision to bring
-        innovation and reliability to the forefront, we have consistently
-        strived to push boundaries and exceed expectations.
-      </p>
-      <p>
-        Our dedicated team of professionals works collaboratively to ensure that
-        we meet the unique needs of every client, fostering trust and building
-        lasting relationships. From cutting-edge technology solutions to
-        personalized customer care, our focus remains on creating value at every
-        step.
-      </p>
-      <p>
-        Thank you for choosing us as your trusted partner. We look forward to
-        growing together and achieving greater heights with you. Together, let's
-        shape a brighter future!
-      </p>
+      <Link className="btn btn-primary btn-lg me-2" to="/greeting">
+        Greeting
+      </Link>
+      <Link className="btn btn-warning btn-lg me-2" to="/toggle">
+        Toggle
+      </Link>
+      <Link className="btn btn-danger btn-lg me-2" to="/toggle-switch">
+        Toggle Switch
+      </Link>
+      <div className="row mt-5"></div>
+      <Link className="btn btn-secondary btn-lg me-2" to="/courses">
+        Courses
+      </Link>
+      <Link className="btn btn-info btn-lg me-2" to="/products">
+        Products
+      </Link>
+      <Link className="btn btn-dark btn-lg me-2" to="/articles">
+        Articles
+      </Link>
+      <Link className="btn btn-warning btn-lg me-2" to="/users">
+        Users
+      </Link>
     </main>
   );
 }
