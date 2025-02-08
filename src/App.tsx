@@ -26,15 +26,17 @@ import PostList from "./Components/PostList.tsx";
 import PostDetails from "./Components/PostDetails.tsx";
 
 function App() {
-  <Router>
-    <div className="container mt-4">
-      <h1 className="text-center">📝 Blog Posts</h1>
-      <Routes>
-        <Route path="/" element={<PostList />} />
-        <Route path="/posts/:id" element={<PostDetails />} />
-      </Routes>
-    </div>
-  </Router>;
+  return (
+    <Router>
+      <div className="container mt-4">
+        <h1 className="text-center">📝 Blog Posts</h1>
+        <Routes>
+          <Route path="/" element={<PostList />} />
+          <Route path="/posts/:id" element={<PostDetails />} />
+        </Routes>
+      </div>
+    </Router>
+  );
 
   //#region Commnted Code
   // const cars = [
