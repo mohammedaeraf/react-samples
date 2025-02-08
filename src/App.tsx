@@ -22,8 +22,21 @@ import UserProfileState from "./Components/UserProfileState.tsx";
 import Vehicles from "./Components/Vehicles.tsx";
 import fetchCars from "./Services/CarService.tsx";
 import Home from "./Components/Home.tsx";
+import PostList from "./Components/PostList.tsx";
+import PostDetails from "./Components/PostDetails.tsx";
 
 function App() {
+  <Router>
+    <div className="container mt-4">
+      <h1 className="text-center">📝 Blog Posts</h1>
+      <Routes>
+        <Route path="/" element={<PostList />} />
+        <Route path="/posts/:id" element={<PostDetails />} />
+      </Routes>
+    </div>
+  </Router>;
+
+  //#region Commnted Code
   // const cars = [
   //   "BMW 7 Series",
   //   "Audi A7",
@@ -33,7 +46,6 @@ function App() {
   //   "Land Rover Defender",
   //   "Hyundai i20",
   // ];
-
   // const bikes = [
   //   "Honda Activa",
   //   "Splendor",
@@ -41,7 +53,6 @@ function App() {
   //   "Burgman",
   //   "Ninja",
   // ];
-
   // let courses = [
   //   {
   //     id: 1,
@@ -68,7 +79,6 @@ function App() {
   //     duration: "30 days",
   //   },
   // ];
-
   // const products = [
   //   {
   //     id: 1,
@@ -111,7 +121,6 @@ function App() {
   //     },
   //   },
   // ];
-
   // return (
   //   <div className="container mt-4">
   //     <h1 className="text-center mb-4">Articles</h1>
@@ -128,23 +137,112 @@ function App() {
   //     </Article>
   //   </div>
   // );
-
-  return (
-    <Router>
-      <header>
-        <h1>React Demos</h1>
-      </header>
-
-      <nav>
-        <Link to="/">Home</Link> | <Link to="/about">About Us</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="/about" element={<AboutUs />}></Route>
-      </Routes>
-    </Router>
-  );
+  // return (
+  //   <Router>
+  //     <header>
+  //       <h1>React Demos</h1>
+  //     </header>
+  //     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+  //       <div className="container-fluid">
+  //         <a className="navbar-brand" href="#">
+  //           React App
+  //         </a>
+  //         <button
+  //           className="navbar-toggler"
+  //           type="button"
+  //           data-bs-toggle="collapse"
+  //           data-bs-target="#navbarSupportedContent"
+  //           aria-controls="navbarSupportedContent"
+  //           aria-expanded="false"
+  //           aria-label="Toggle navigation"
+  //         >
+  //           <span className="navbar-toggler-icon"></span>
+  //         </button>
+  //         <div className="collapse navbar-collapse" id="navbarSupportedContent">
+  //           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+  //             <li className="nav-item">
+  //               <Link className="nav-link active" to="/">
+  //                 Home
+  //               </Link>
+  //             </li>
+  //             <li className="nav-item">
+  //               <Link to="/about" className="nav-link">
+  //                 About Us
+  //               </Link>
+  //             </li>
+  //             <li className="nav-item dropdown">
+  //               <Link
+  //                 className="nav-link dropdown-toggle"
+  //                 to="#"
+  //                 id="navbarDropdown"
+  //                 role="button"
+  //                 data-bs-toggle="dropdown"
+  //                 aria-expanded="false"
+  //               >
+  //                 Components
+  //               </Link>
+  //               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+  //                 <li>
+  //                   <Link className="dropdown-item" to="/greeting">
+  //                     Greeting
+  //                   </Link>
+  //                 </li>
+  //                 <li>
+  //                   <a className="dropdown-item" href="#">
+  //                     Toggle
+  //                   </a>
+  //                 </li>
+  //                 <li>
+  //                   <a className="dropdown-item" href="#">
+  //                     Toggle Switch
+  //                   </a>
+  //                 </li>
+  //                 <li>
+  //                   <hr className="dropdown-divider" />
+  //                 </li>
+  //                 <li>
+  //                   <a className="dropdown-item" href="#">
+  //                     Product List
+  //                   </a>
+  //                 </li>
+  //                 <li>
+  //                   <Link className="dropdown-item" to="/recipes">
+  //                     Recipe List
+  //                   </Link>
+  //                 </li>
+  //                 <li>
+  //                   <a className="dropdown-item" href="#">
+  //                     Course List
+  //                   </a>
+  //                 </li>
+  //                 <li>
+  //                   <hr className="dropdown-divider" />
+  //                 </li>
+  //                 <li>
+  //                   <a className="dropdown-item" href="#">
+  //                     User List
+  //                   </a>
+  //                 </li>
+  //                 <li>
+  //                   <a className="dropdown-item" href="#">
+  //                     Article List
+  //                   </a>
+  //                 </li>
+  //               </ul>
+  //             </li>
+  //           </ul>
+  //         </div>
+  //       </div>
+  //     </nav>
+  //     <Routes>
+  //       <Route path="/" element={<Home />}></Route>
+  //       <Route path="/about" element={<AboutUs />}></Route>
+  //       <Route path="/toggle" element={<Toggle />}></Route>
+  //       <Route path="/recipes" element={<RecipeList />}></Route>
+  //     </Routes>
+  //   </Router>
+  // );
+  //#endregion Commnted Code
 }
 
 export default App;
