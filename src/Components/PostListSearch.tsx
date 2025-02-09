@@ -16,6 +16,8 @@ const PostListSearch = () => {
   // Initialize it as null
   const [error, setError] = useState<string | null>(null);
 
+  // Declare a state variable 'searchTerm' to hold the search term entered by the user
+  // Initialize it as an empty string
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   // Use the useEffect hook to fetch posts when the component mounts
@@ -32,8 +34,11 @@ const PostListSearch = () => {
     return <p className="text-danger">{error}</p>;
   }
 
-    const filteredPosts = posts.filter((post) => post.title.toLowerCase().includes(searchTerm.toLowerCase()));
-    
+  // Filter the posts based on the search term
+  const filteredPosts = posts.filter((post) =>
+    post.title.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
   return (
     <div className="container mt-4">
       <h2>🔎 Search Post</h2>
