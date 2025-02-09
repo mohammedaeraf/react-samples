@@ -25,6 +25,12 @@ function Home() {
       <Link className="btn btn-warning btn-lg me-2" to="/users">
         Users
       </Link>
+      <Link className="btn btn-success btn-lg me-2" to="/posts">
+        Posts
+      </Link>
+      <Link className="btn btn-success btn-lg me-2" to="/posts-search">
+        Search Posts
+      </Link>
     </main>
   );
 }

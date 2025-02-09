@@ -25,6 +25,7 @@ import Home from "./Components/Home.tsx";
 import PostList from "./Components/PostList.tsx";
 import PostDetails from "./Components/PostDetails.tsx";
 import CourseList from "./Components/CourseList.tsx";
+import PostListSearch from "./Components/PostListSearch.tsx";
 
 function App() {
   return (
@@ -135,6 +136,7 @@ function App() {
           <Route path="/articles" element={<ArticleList />}></Route>
           <Route path="/recipes" element={<RecipeList />}></Route>
           <Route path="/posts" element={<PostList />} />
+          <Route path="/posts-search" element={<PostListSearch />} />
           <Route path="/products" element={<ProductList />} />
           <Route path="/courses" element={<CourseList />} />
           <Route path="/users" element={<UserList />} />
