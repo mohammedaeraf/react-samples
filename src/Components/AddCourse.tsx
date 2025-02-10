@@ -20,7 +20,7 @@ const AddCourse: React.FC = () => {
     const request = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: requestBodyJSON,
+       body: requestBodyJSON,
     };
 
     const response = await fetch(API_URL, request);
@@ -28,11 +28,22 @@ const AddCourse: React.FC = () => {
       console.log("Course added..");
       const data = response.json();
       console.log(data);
+      setMessage("Course Added Successfully");
+      setTitle("");
+      setDescription("");
+    } else {
+      setMessage("Error while adding Course");
     }
   };
 
   return (
     <div>
+      {message ? (
+        <div className="alert alert-primary"> {message} </div>
+      ) : (
+        <div></div>
+      )}
+
       <h2>Add Course</h2>
       <form className="border p-3 shadow-lg rounded" onSubmit={handleSubmit}>
         <div>
