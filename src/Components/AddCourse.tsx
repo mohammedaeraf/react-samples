@@ -1,43 +1,50 @@
 import { useState } from "react";
 
 const AddCourse: React.FC = () => {
+  // API URL for adding a new course
   const API_URL = "https://67a75555203008941f674e2f.mockapi.io/courses";
 
+  // State variables to hold the title, description, and message
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [message, setMessage] = useState("");
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    addUser();
+    e.preventDefault(); // Prevent the default form submission behavior
+    addCourse(); // Call the addCourse function to add the course
   };
 
-  const addUser = async () => {
+  // Function to add a new course
+  const addCourse = async () => {
+    // Create a request body with title and description
     let requestBody = { title, description }; // JS Object
     let requestBodyJSON = JSON.stringify(requestBody); // JSON Object
 
+    // Create a request object with method, headers, and body
     const request = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-       body: requestBodyJSON,
+      body: requestBodyJSON,
     };
 
+    // Make a POST request to the API
     const response = await fetch(API_URL, request);
     if (response.ok) {
       console.log("Course added..");
-      const data = response.json();
+      const data = await response.json(); // Parse the JSON response
       console.log(data);
-      setMessage("Course Added Successfully");
-      setTitle("");
-      setDescription("");
+      setMessage("Course Added Successfully"); // Set success message
+      setTitle(""); // Clear the title input field
+      setDescription(""); // Clear the description input field
     } else {
-      setMessage("Error while adding Course");
+      setMessage("Error while adding Course"); // Set error message
     }
   };
 
   return (
     <div>
+      {/* Display message if it exists */}
       {message ? (
         <div className="alert alert-primary"> {message} </div>
       ) : (
@@ -45,6 +52,7 @@ const AddCourse: React.FC = () => {
       )}
 
       <h2>Add Course</h2>
+      {/* Form for adding a new course */}
       <form className="border p-3 shadow-lg rounded" onSubmit={handleSubmit}>
         <div>
           <div className="mb-2">
@@ -60,7 +68,7 @@ const AddCourse: React.FC = () => {
               value={title}
               className="form-control mb-4"
               placeholder="Enter Course Title"
-              onChange={(e) => setTitle(e.target.value)}
+              onChange={(e) => setTitle(e.target.value)} // Update title state on input change
             />
           </div>
         </div>
@@ -78,7 +86,7 @@ const AddCourse: React.FC = () => {
               value={description}
               className="form-control mb-4"
               placeholder="Enter Course Description"
-              onChange={(e) => setDescription(e.target.value)}
+              onChange={(e) => setDescription(e.target.value)} // Update description state on input change
             />
           </div>
         </div>
@@ -91,4 +99,5 @@ const AddCourse: React.FC = () => {
     </div>
   );
 };
+
 export default AddCourse;
