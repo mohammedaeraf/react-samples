@@ -1,4 +1,16 @@
 import { useState } from "react";
+import { Form } from "react-router-dom";
+
+/*
+Steps to Implement AddCourse Component:
+
+1. Define the API URL for adding a new course.
+2. Create state variables to hold the title, description, and message.
+3. Implement the handleSubmit function to handle form submission.
+4. Implement the addCourse function to make a POST request to the API.
+5. Create the form structure with input fields for title and description.
+6. Display a message based on the success or failure of the API request.
+*/
 
 const AddCourse: React.FC = () => {
   // API URL for adding a new course
