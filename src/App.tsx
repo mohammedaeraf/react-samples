@@ -27,6 +27,7 @@ import PostDetails from "./Components/PostDetails.tsx";
 import CourseList from "./Components/CourseList.tsx";
 import PostListSearch from "./Components/PostListSearch.tsx";
 import Courses from "./Components/Courses.tsx";
+import AddCourse from "./Components/AddCourse.tsx";
 
 function App() {
   return (
@@ -139,7 +140,10 @@ function App() {
           <Route path="/posts" element={<PostList />} />
           <Route path="/posts-search" element={<PostListSearch />} />
           <Route path="/products" element={<ProductList />} />
+
           <Route path="/courses" element={<Courses />} />
+          <Route path="/add-course" element={<AddCourse />} />
+
           <Route path="/users" element={<UserList />} />
           <Route path="/articles" element={<ArticleList />} />
           <Route path="/posts/:id" element={<PostDetails />} />

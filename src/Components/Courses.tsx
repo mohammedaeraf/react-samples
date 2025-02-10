@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 // Define the Course interface to type the course data
 interface Course {
@@ -22,6 +23,11 @@ function Courses() {
 
   return (
     <>
+      <div>
+        <Link to="/add-course" className="btn btn-outline-success mb-3">
+          ➕ Add Course
+        </Link>
+      </div>
       <h2>Course List</h2>
       <table className="table table-striped table-hover">
         <thead>
