@@ -19,12 +19,40 @@ const AddCourse: React.FC = () => {
   // State variables to hold the title, description, and message
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
+  const [titleError, setTitleError] = useState("");
+  const [descriptionError, setDescriptionError] = useState("");
   const [message, setMessage] = useState("");
 
   // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(); // Prevent the default form submission behavior
-    addCourse(); // Call the addCourse function to add the course
+
+    if (isFormValid()) {
+      addCourse(); // Call the addCourse function to add the course
+      setMessage("");
+    } else {
+      setMessage("Please fix the validation errors");
+    }
+  };
+
+  const isFormValid = () => {
+    let validForm: boolean = true;
+
+    if (title.trim() == "") {
+      setTitleError("Title is required");
+      validForm = false;
+    } else {
+      setTitleError("");
+    }
+
+    if (description.trim().length == 0) {
+      setDescriptionError("Description is required");
+      validForm = false;
+    } else {
+      setDescriptionError("");
+    }
+
+    return validForm;
   };
 
   // Function to add a new course
@@ -58,7 +86,7 @@ const AddCourse: React.FC = () => {
     <div>
       {/* Display message if it exists */}
       {message ? (
-        <div className="alert alert-primary"> {message} </div>
+        <div className="alert alert-warning alert-dismissible"> {message} </div>
       ) : (
         <div></div>
       )}
@@ -82,6 +110,11 @@ const AddCourse: React.FC = () => {
               placeholder="Enter Course Title"
               onChange={(e) => setTitle(e.target.value)} // Update title state on input change
             />
+            {titleError ? (
+              <p className="text-danger small"> {titleError} </p>
+            ) : (
+              <p></p>
+            )}
           </div>
         </div>
         <div>
@@ -100,6 +133,11 @@ const AddCourse: React.FC = () => {
               placeholder="Enter Course Description"
               onChange={(e) => setDescription(e.target.value)} // Update description state on input change
             />
+            {descriptionError ? (
+              <p className="text-danger small"> {descriptionError} </p>
+            ) : (
+              <p></p>
+            )}
           </div>
         </div>
         <div>
