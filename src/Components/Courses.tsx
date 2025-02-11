@@ -24,7 +24,7 @@ function Courses() {
       method: "DELETE",
     };
     const response = await fetch(`${API_URL}/${id}`, request);
-    const data = response.json();
+    const data = await response.json();
     console.log(data);
 
     const updatedCourses = courses.filter((course) => course.id != id);
