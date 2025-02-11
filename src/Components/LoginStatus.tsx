@@ -1,5 +1,3 @@
-import React from "react";
-
 function LoginStatus() {
   const isLoggedIn = true; // Change this manually to see different outputs
 

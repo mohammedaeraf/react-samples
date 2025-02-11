@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 interface Product {
   id: number;
   title: string;
