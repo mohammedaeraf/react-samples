@@ -59,6 +59,12 @@ function Courses() {
               <td>{course.title}</td>
               <td>{course.description}</td>
               <td>
+                <Link
+                  to={`/edit-course/${course.id}`}
+                  className="btn btn-warning btn-sm me-2"
+                >
+                  ✏ Edit
+                </Link>
                 <button
                   className="btn btn-danger"
                   onClick={() => deleteCourse(course.id)}
