@@ -11,7 +11,9 @@ const API_URL = "https://67a75555203008941f674e2f.mockapi.io/courses"; // Change
 
 const EditCourse: React.FC = () => {
   const { id } = useParams<{ id: string }>(); // Get course ID from URL
+  
   const navigate = useNavigate();
+
   const [course, setCourse] = useState<Course | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
@@ -32,19 +34,17 @@ const EditCourse: React.FC = () => {
     e.preventDefault();
     if (!course) return;
 
-    try {
-      const response = await fetch(`${API_URL}/${id}`, {
-        method: "PUT",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(course),
-      });
+    const response = await fetch(`${API_URL}/${id}`, {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(course),
+    });
 
-      if (!response.ok) throw new Error("Update failed");
-
+    if (!response.ok) {
+      setError("Update failed");
+    } else {
       setMessage("✅ Course updated successfully!");
       setTimeout(() => navigate("/courses"), 1500); // Redirect after update
-    } catch {
-      setError("❌ Failed to update course.");
     }
   };
 
