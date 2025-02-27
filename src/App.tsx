@@ -16,6 +16,8 @@ import PostListSearch from "./Components/PostListSearch.tsx";
 import Courses from "./Components/Courses.tsx";
 import AddCourse from "./Components/AddCourse.tsx";
 import EditCourse from "./Components/EditCourse.tsx";
+import PopularMovies from "./Components/PopularMovies.tsx";
+import SearchMovies from "./Components/SearchMovies.tsx";
 
 function App() {
   return (
@@ -136,6 +138,9 @@ function App() {
           <Route path="/users" element={<UserList />} />
           <Route path="/articles" element={<ArticleList />} />
           <Route path="/posts/:id" element={<PostDetails />} />
+
+          <Route path="/popular-movies" element={<PopularMovies />} />
+          <Route path="/search-movies" element={<SearchMovies />} />
         </Routes>
       </main>
     </Router>

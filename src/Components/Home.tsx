@@ -31,6 +31,12 @@ function Home() {
       <Link className="btn btn-success btn-lg me-2" to="/posts-search">
         Search Posts
       </Link>
+      <Link className="btn btn-success btn-lg me-2" to="/popular-movies">
+        Popular Movies
+      </Link>
+      <Link className="btn btn-success btn-lg me-2" to="/search-movies">
+        Search Movies
+      </Link>
     </main>
   );
 }
